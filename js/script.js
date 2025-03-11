@@ -7,7 +7,8 @@ function arrayCalc(num1, num2, num3) {
     for (var x = 1; x < arr.length; x++) {
         sum += arr[x]
         mul *= arr[x]
-        divide /= arr[x]
+        if (arr[x] === 0) divide = "Math Error; Can't divide on 0";
+        else divide /= arr[x];
     }
     results = [sum, mul, divide]
     return results
